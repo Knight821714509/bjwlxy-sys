@@ -21,4 +21,6 @@ Route::get('insertUser','Users\InsertUsersController@insertUser');
 
 Route::get('findUser','Users\FindUserController@findUser');
 
-Route::get('test',);
+Route::get('test',function (){
+    return view('test');
+});
