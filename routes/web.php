@@ -17,10 +17,4 @@ Route::get('/', function () {
 
 Route::get('insertArticle','Article\InsertArticleController@insertArticle');
 
-Route::get('insertUser','Users\InsertUsersController@insertUser');
-
-Route::get('findUser','Users\FindUserController@findUser');
-
-Route::get('test',function (){
-    return view('test');
-});
+Route::get('findArticle','Article\FindArticleController@findArticle');

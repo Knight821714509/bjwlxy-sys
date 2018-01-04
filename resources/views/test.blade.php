@@ -10,9 +10,9 @@
 <body>
 <div class="container">
     <div>
-        <div>11</div>
-        <div>22</div>
-        <div>33</div>
+        <div><h1>{{$Article['title']}}</h1></div>
+        <div><h2>{{$Article['auth']}}</h2></div>
+        <div><h3>{{$Article['content']}}</h3></div>
     </div>
 </div>
 </body>
