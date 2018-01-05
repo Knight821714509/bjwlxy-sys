@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Article;
 
+use App\Article;
 use App\Http\Controllers\Controller;
 
 class FindArticleController extends Controller{
     public function findArticle(){
-        return view('test')->with('Article',['title'=>'标题','auth'=>'管理员','content'=>'文章内容','date'=>'2018']);
+        $article = Article::all();
+        return view('test')->with('Article',['title'=>$article[1] ->title,'auth'=>$article[1] ->uid,'content'=>$article[1] ->content,'date'=>'2018']);
     }
 }

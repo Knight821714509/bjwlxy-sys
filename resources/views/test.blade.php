@@ -6,14 +6,11 @@
     <link rel="stylesheet" href="{{URL::asset('css/bootstrap.css')}}">
     <script src="{{URL::asset('js/jQuery.js')}}"></script>
     <script src="{{URL::asset('js/bootstrap.js')}}"></script>
-
     <style>
         .fontlink{
             color: #000000;
             font-size:20px ;
             font-weight: 700;
-
-
         }
         .contentlink{
             color: #333333;
@@ -21,7 +18,6 @@
         }
         .divstyle{
             margin-top: 20px;
-
         }
         a:hover{
             color: blue;
@@ -44,7 +40,6 @@
             border-bottom: #ffffff 1px solid;
             border-top:#ffffff 1px solid;
             margin-top: 20px;
-
         }
         .padding-0{
             padding: 0;
@@ -63,9 +58,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand" href="#">{{$Article['title']}}</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -151,11 +145,11 @@
         <div class="text-center" style="margin-top: 40px;margin-bottom: 50px">
             <h1>学院动态</h1>
         </div>
+        {{$Article['content']}}
         <div class="col-md-6">
             <img src="{{URL::asset('img/1.jpg')}}" alt="" width="100%">
             <div class="text-center">
                 <a class="fontlink" href="https://www.baidu.com">文章标题</a>
-
             </div>
             <div>
                 <a class="contentlink" href="">aaaaaaaaaaaaaaaaaaaaaaaaaa <br> <br>  <br> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
@@ -187,11 +181,10 @@
         </div>
         <div class="bs-example bs-example-tabs col-md-12" data-example-id="togglable-tabs" style="margin-top: 50px;margin-bottom: 50px">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active col-md-3 padding-0"><a href="#home" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
-                <li role="presentation" class="col-md-3 padding-0"><a href="#profile" role="tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
-                <li role="presentation" class="col-md-3 padding-0"><a href="#dropdown1" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
-                <li role="presentation" class="col-md-3 padding-0"><a href="#dropdown2" role="tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
-
+                <li role="presentation" class="active col-md-3 col-xs-3 padding-0"><a href="#home" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
+                <li role="presentation" class="col-md-3 col-xs-3 padding-0"><a href="#profile" role="tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
+                <li role="presentation" class="col-md-3 col-xs-3 padding-0"><a href="#dropdown1" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
+                <li role="presentation" class="col-md-3 col-xs-3 padding-0"><a href="#dropdown2" role="tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
@@ -215,8 +208,8 @@
                         <a href="" class="fontlink">文章标题</a>
                         <hr>
                         <a href="" class="contentlink">dddddddddddddddd</a>
-
-                    </div><div class="divstyle col-md-6">
+                    </div>
+                    <div class="divstyle col-md-6">
                         <a href="" class="fontlink">文章标题</a>
                         <hr>
                         <a href="" class="contentlink">dddddddddddddddd</a>
@@ -225,7 +218,6 @@
                         <a href="" class="fontlink">文章标题</a>
                         <hr>
                         <a href="" class="contentlink">dddddddddddddddd</a>
-
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
@@ -293,7 +285,6 @@
                         <a href="" class="fontlink">文章标题</a>
                         <hr>
                         <a href="" class="contentlink">dddddddddddddddd</a>
-
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
