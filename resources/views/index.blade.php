@@ -46,7 +46,7 @@
         }
     </style>
 </head>
-<body style="background: url({{URL::asset('img/1.jpg')}}) no-repeat;background-attachment: fixed;background-size: cover;">
+<body style="background: url({{URL::asset('img/2.jpg')}}) no-repeat;background-attachment: fixed;background-size: cover;">
 <div class="container" style="margin-top: 50px;padding: 0;background-color: #ffffff;margin-bottom: 50px;">
     <nav class="navbar navbar-default"style="margin-bottom: 0px">
         <div class="container-fluid">
@@ -58,7 +58,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">{{$Article['title']}}</a>
+                <a class="navbar-brand" href="#">{{$article['title']}}</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -145,7 +145,6 @@
         <div class="text-center" style="margin-top: 40px;margin-bottom: 50px">
             <h1>学院动态</h1>
         </div>
-        {{$Article['content']}}
         <div class="col-md-6">
             <img src="{{URL::asset('img/1.jpg')}}" alt="" width="100%">
             <div class="text-center">
