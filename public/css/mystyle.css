@@ -1,0 +1,21 @@
+
+.fontlink{
+    color: #000000;
+    font-size:20px ;
+    font-weight: 700;
+}
+.contentlink{
+    color: #333333;
+    font-size: 16px;
+}
+.divstyle{
+    margin-top: 20px;
+}
+#footer{
+    border-bottom: #ffffff 1px solid;
+    border-top:#ffffff 1px solid;
+    margin-top: 20px;
+}
+.padding-0{
+    padding: 0;
+}
