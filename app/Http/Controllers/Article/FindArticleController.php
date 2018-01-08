@@ -13,7 +13,8 @@ class FindArticleController extends Controller{
         $list = Article::orderBy('view','desc')->limit(5)->get();
         Article::increment('view');
         return view('content')
-            ->with('article',['title'=>$article->title,'auth'=>$auth->name,'content'=>$article->content])
+            ->with('article',$article)
+            ->with('auth',$auth->name)
             ->with('list',$list);
     }
 }

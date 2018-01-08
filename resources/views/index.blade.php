@@ -34,7 +34,7 @@
 <div class="body-mask" style="z-index: -9"></div>
 <div style="padding-top: 50px">
     <div class="container" style="padding: 0;background-color: #ffffff;">
-        @include('header')
+        @include('layouts.header')
         <div id="myCarousel" class="carousel slide">
             <!-- 轮播（Carousel）指标 -->
             <ol class="carousel-indicators">
@@ -249,6 +249,6 @@
         </div>
     </div>
 </div>
-@include('footer')
+@include('layouts.footer')
 </body>
 </html>

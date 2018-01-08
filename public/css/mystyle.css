@@ -35,3 +35,12 @@
 .btn>a{
     color: #ffffff;
 }
+.list-margin{
+    margin-top: 40px;
+}
+
+.pack{
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 11px 9px 10px #888;
+}

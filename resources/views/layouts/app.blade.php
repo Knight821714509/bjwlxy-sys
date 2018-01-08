@@ -64,6 +64,7 @@
                                     </a>
 
                                     <ul class="dropdown-menu" role="menu">
+                                        <li><a href="">编辑信息</a></li>
                                         <li>
                                             <a href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
