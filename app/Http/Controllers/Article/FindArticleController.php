@@ -11,6 +11,7 @@ class FindArticleController extends Controller{
         $article = Article::where('id',$id)->first();
         $auth = User::where('id',$article->uid)->first();
         $list = Article::orderBy('view','desc')->limit(5)->get();
+        Article::increment('view');
         return view('content')
             ->with('article',['title'=>$article->title,'auth'=>$auth->username,'content'=>$article->content])
             ->with('list',$list);

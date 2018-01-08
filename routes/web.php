@@ -20,3 +20,6 @@ Route::get('insertArticle','Article\InsertArticleController@insertArticle');
 Route::get('findArticle','Article\FindArticleController@findArticle');
 
 Route::get('content/{id}','Article\FindArticleController@findArticleInContent');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -29,15 +29,15 @@
         <div class="col-md-3 pull-right pack">
             <h2>热门文章</h2>
             <hr>
-            <ul>
+            <ul class="list-group">
             @foreach($list as $item)
-                <li>{{$item->title}}</li>
+                <li class="list-group-item"><a title="{{$item->title}}" href="{{$item->id}}">{{$item->title}}</a></li>
             @endforeach
             </ul>
         </div>
     </div>
 </div>
-<div>
+<div class="navbar-bottom">
     @include('footer')
 </div>
 </body>

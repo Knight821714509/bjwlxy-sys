@@ -97,7 +97,7 @@
             </div>
 
         </div>
-        <div class="bs-example bs-example-tabs col-md-12" data-example-id="togglable-tabs" style="margin-top: 50px;margin-bottom: 50px">
+        <div class="bs-example bs-example-tabs col-md-12" data-example-id="togglable-tabs" style="margin-top: 50px;">
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active col-md-3 col-xs-3 padding-0"><a href="#home" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
                 <li role="presentation" class="col-md-3 col-xs-3 padding-0"><a href="#profile" role="tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
