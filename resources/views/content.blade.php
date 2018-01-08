@@ -27,7 +27,13 @@
             <?php echo $article['content'] ?>
         </div>
         <div class="col-md-3 pull-right pack">
-
+            <h2>热门文章</h2>
+            <hr>
+            <ul>
+            @foreach($list as $item)
+                <li>{{$item->title}}</li>
+            @endforeach
+            </ul>
         </div>
     </div>
 </div>

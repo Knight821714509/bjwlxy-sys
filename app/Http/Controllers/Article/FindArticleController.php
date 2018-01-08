@@ -10,6 +10,9 @@ class FindArticleController extends Controller{
     public function findArticleInContent($id){
         $article = Article::where('id',$id)->first();
         $auth = User::where('id',$article->uid)->first();
-        return view('content')->with('article',['title'=>$article->title,'auth'=>$auth->username,'content'=>$article->content]);
+        $list = Article::orderBy('view','desc')->limit(5)->get();
+        return view('content')
+            ->with('article',['title'=>$article->title,'auth'=>$auth->username,'content'=>$article->content])
+            ->with('list',$list);
     }
 }
