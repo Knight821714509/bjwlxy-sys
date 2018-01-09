@@ -24,3 +24,5 @@ Route::get('content/{id}','Article\FindArticleController@findArticleInContent');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('list','Article\FindTitleController@findTitleInIndex');

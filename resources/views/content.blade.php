@@ -1,7 +1,10 @@
-@extends('layouts.list')
+@extends('layouts.special')
 
 @section('content')
-    <h1><?php echo $article->title?></h1>
-    <h3><?php echo $auth .'   点击：'.$article->view.'次   发布时间:'.date('yyyy-MM-dd HH:mm:ss',$article->create_time);?> </h3>
-    <?php echo $article->content ?>
+    <div class="col-md-12">
+        <h1>{{$article->title}}</h1>
+        <h6 class="text-center"><?php echo $auth .'   点击：'.$article->view.'次   发布时间:'.date('m-d',$article->create_time);?> </h6>
+        <hr>
+        <?php echo $article->content ?>
+    </div>
 @endsection
