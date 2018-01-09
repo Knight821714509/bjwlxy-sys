@@ -9,7 +9,7 @@
     <script src="{{URL::asset('js/bootstrap.js')}}"></script>
     <style>
         a:hover{
-            color: blue;
+            color: gray;
             text-decoration: none;
         }
         hr{
@@ -33,7 +33,7 @@
 <body style="background: url({{URL::asset('img/bg.jpg')}}) no-repeat;background-attachment: fixed;background-size: cover;">
 <div class="body-mask" style="z-index: -9"></div>
 <div style="padding-top: 50px">
-    <div class="container" style="padding: 0;background-color: #ffffff;">
+    <div class="container" style="padding: 0;background-color: #ffffff;padding-bottom: 50px">
         @include('layouts.header')
         <div id="myCarousel" class="carousel slide">
             <!-- 轮播（Carousel）指标 -->
@@ -45,13 +45,13 @@
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="img/1.jpg" alt="First slide">
+                    <img src="img/1.jpg" alt="First slide" width="100%">
                 </div>
                 <div class="item">
-                    <img src="img/2.jpg" alt="Second slide">
+                    <img src="img/2.jpg" alt="Second slide" width="100%">
                 </div>
                 <div class="item">
-                    <img src="img/3.jpg" alt="Third slide">
+                    <img src="img/3.jpg" alt="Third slide" width="100%">
                 </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
@@ -70,7 +70,7 @@
                 <h1>学院动态</h1>
             </div>
             <div class="col-md-6">
-                <img src="{{URL::asset('img/1.jpg')}}" alt="" width="100%">
+                <img src="http://p0.ifengimg.com/fck/2017_17/77686f0632b8895_w800_h545.jpg" alt="" width="100%">
                 <div class="text-center">
                     <a class="fontlink" href="https://www.baidu.com">文章标题</a>
                 </div>
@@ -79,28 +79,16 @@
                 </div>
             </div>
             <div class="col-md-6">
+                @foreach($xydt as &$item)
                 <div class="divstyle">
-                    <a class="fontlink" href="">文章标题</a>
+                    <a class="fontlink" href="content/{{$item->id}}">
+                        <p class="myoverflow">{{$item->title}}</p>
+                        <p class="contentlink">{{$item->description}}</p>
+                        <p class="contentlink text-right">{{date('y/m/d',$item->create_time)}}</p>
+                    </a>
                     <hr>
-                    <a class="contentlink" href="">DDDDDDDD</a>
                 </div>
-
-                <div  class="divstyle">
-                    <a class="fontlink" href="">文章标题</a>
-                    <hr>
-                    <a class="contentlink" href="">DDDDDDDD</a>
-                </div>
-                <div  class="divstyle">
-                    <a class="fontlink" href="">文章标题</a>
-                    <hr>
-                    <a class="contentlink" href="">DDDDDDDD</a>
-                </div>
-                <div class="divstyle" >
-                    <a class="fontlink" href="">文章标题</a>
-                    <hr>
-                    <a class="contentlink" href="">DDDDDDDD</a>
-                </div>
-
+                @endforeach
             </div>
             <div class="bs-example bs-example-tabs col-md-12" data-example-id="togglable-tabs" style="margin-top: 50px;">
                 <ul class="nav nav-tabs" role="tablist">
@@ -109,7 +97,7 @@
                     <li role="presentation" class="col-md-3 col-xs-3 padding-0"><a href="#dropdown1" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
                     <li role="presentation" class="col-md-3 col-xs-3 padding-0"><a href="#dropdown2" role="tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
                 </ul>
-                <div id="myTabContent" class="tab-content">
+                <div id="myTabContent" class="tab-content" style="margin-top: 50px">
                     <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
                         <div class="divstyle col-md-6">
                             <a href="" class="fontlink">文章标题</a>

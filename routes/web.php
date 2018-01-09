@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'Article\FindTitleController@findTitleForIndex');
 
 Route::get('insertArticle','Article\InsertArticleController@insertArticle');
 

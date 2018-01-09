@@ -5,11 +5,20 @@
     font-weight: 700;
 }
 .contentlink{
-    color: #333333;
+    color: #888;
     font-size: 16px;
+    font-weight: 300;
+}
+.friend-link{
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+}
+.friend-link>a{
+    color: white;
 }
 .divstyle{
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 #footer{
     border-bottom: #ffffff 1px solid;
@@ -45,10 +54,7 @@
     box-shadow: 11px 9px 10px #888;
 }
 .myoverflow{
-    width:100%;
-    word-break:keep-all;/* 不换行 */
     white-space:nowrap;/* 不换行 */
     overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
-    text-overflow: ellipsis;
     text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
 }

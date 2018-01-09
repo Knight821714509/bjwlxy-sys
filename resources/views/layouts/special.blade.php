@@ -18,11 +18,20 @@
             @yield('content')
         </div>
         <div class="col-md-3 pull-right pack">
-            <h2>热门文章</h2>
+            <h3>热门文章</h3>
             <hr>
             <ul class="list-group">
                 @foreach($list as $item)
-                    <li class="list-group-item"><a style="width: 100px" title="{{$item->title}}" href="{{$item->id}}">{{$item->title}}</a></li>
+                    <li class="list-group-item"><a style="width: 100px" title="{{$item->title}}" href="{{url('content').'/'.$item->id}}"><p class="myoverflow">{{$item->title}}</p></a></li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="col-md-3 pull-right pack" style="margin-top: 27px">
+            <h3>最新文章</h3>
+            <hr>
+            <ul class="list-group">
+                @foreach($newList as $item)
+                    <li class="list-group-item"><a style="width: 100px" title="{{$item->title}}" href="{{url('content').'/'.$item->id}}"><p class="myoverflow">{{$item->title}}</p></a></li>
                 @endforeach
             </ul>
         </div>
