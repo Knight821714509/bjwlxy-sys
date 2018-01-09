@@ -4,8 +4,9 @@
         <ul class="list-group list-margin">
             @foreach($titleList as &$item)
             <li class="list-group-item">
-                <a title="{{$item->title}}" href="content/{{$item->id}}">
+                <a title="{{$item->title}}" href="{{url('content').'/'.$item->id}}">
                     {{$item->title}}
+                    <span class="pull-right">{{date('y/m/h',$item->create_time)}}</span>
                 </a>
             </li>
                 <br>

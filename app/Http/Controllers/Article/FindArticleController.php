@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Article;
 
 use App\Article;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Column\FindColumnController;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,9 @@ class FindArticleController extends Controller{
         $article = Article::where('id',$id)->first();
         $auth = User::where('id',$article->uid)->first();
         Article::increment('view');
+        $nav = FindColumnController::findAllColumn(0);
         return view('content')
+            ->with('nav',$nav)
             ->with('article',$article)
             ->with('auth',$auth->name)
             ->with('list',self::findHotList($request,'view'))

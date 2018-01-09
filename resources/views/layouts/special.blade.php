@@ -14,7 +14,7 @@
 </div>
 <div class="container">
     <div class="container-fluid">
-        <div class="col-md-8 pack" style="min-height: 668px">
+        <div class="col-md-8 pack" style="min-height: 750px">
             @yield('content')
         </div>
         <div class="col-md-3 pull-right pack">

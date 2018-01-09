@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
-    <title>test</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{URL::asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::asset('css/mystyle.css')}}">
     <script src="{{URL::asset('js/jQuery.js')}}"></script>
@@ -99,37 +99,16 @@
                 </ul>
                 <div id="myTabContent" class="tab-content" style="margin-top: 50px">
                     <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
-                        <div class="divstyle col-md-6">
-                            <a href="" class="fontlink">文章标题</a>
-                            <hr>
-                            <a href="" class="contentlink">dddddddddddddddd</a>
-                        </div>
-                        <div class="divstyle col-md-6">
-                            <a href="" class="fontlink">文章标题</a>
-                            <hr>
-                            <a href="" class="contentlink">dddddddddddddddd</a>
-
-                        </div>
-                        <div class="divstyle col-md-6">
-                            <a href="" class="fontlink">文章标题</a>
-                            <hr>
-                            <a href="" class="contentlink">dddddddddddddddd</a>
-                        </div>
-                        <div class="divstyle col-md-6">
-                            <a href="" class="fontlink">文章标题</a>
-                            <hr>
-                            <a href="" class="contentlink">dddddddddddddddd</a>
-                        </div>
-                        <div class="divstyle col-md-6">
-                            <a href="" class="fontlink">文章标题</a>
-                            <hr>
-                            <a href="" class="contentlink">dddddddddddddddd</a>
-                        </div>
-                        <div class="divstyle col-md-6">
-                            <a href="" class="fontlink">文章标题</a>
-                            <hr>
-                            <a href="" class="contentlink">dddddddddddddddd</a>
-                        </div>
+                        @foreach($zzjg as &$item)
+                            <div class="divstyle col-md-6">
+                                <a class="fontlink" href="content/{{$item->id}}">
+                                    <p class="myoverflow">{{$item->title}}</p>
+                                    <p class="contentlink">{{$item->description}}</p>
+                                    <p class="contentlink text-right">{{date('y/m/d',$item->create_time)}}</p>
+                                </a>
+                                <hr>
+                            </div>
+                        @endforeach
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
                         <div class="divstyle col-md-6">

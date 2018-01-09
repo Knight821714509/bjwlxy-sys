@@ -20,6 +20,9 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
+                @foreach($nav as &$item)
+                    <li><a href="{{url('list').'/'.$item->url}}">{{$item->title}}</a></li>
+                @endforeach
             </ul>
         </div>
     </div>

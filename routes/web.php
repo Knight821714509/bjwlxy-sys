@@ -12,15 +12,14 @@
 */
 
 Route::get('/', 'Article\FindTitleController@findTitleForIndex');
+Route::get('list/{name}','Article\FindTitleController@findTitleByColumn');
+Route::get('list','Article\FindTitleController@findTitleInIndex');
+Route::get('content/{id}','Article\FindArticleController@findArticleInContent');
 
 Route::get('insertArticle','Article\InsertArticleController@insertArticle');
 
-Route::get('findArticle','Article\FindArticleController@findArticle');
-
-Route::get('content/{id}','Article\FindArticleController@findArticleInContent');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('list','Article\FindTitleController@findTitleInIndex');
