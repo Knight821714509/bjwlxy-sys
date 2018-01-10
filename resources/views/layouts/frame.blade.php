@@ -25,13 +25,33 @@
             height: 100%;
             width: 100%
         }
+        @yield('style')
     </style>
     <!--script-->
     <script src="{{asset('js/jQuery.js')}}"></script>
     <script src="{{asset('js/bootstrap.js')}}"></script>
 </head>
-<body>
-<iframe src="admin-nav" id="myiframe" width="10%" height="100%" scrolling="no" frameborder="0"></iframe>
-<iframe src="admin" class="pull-right" name="mainframe" width="90%" height="100%" scrolling="yes" frameborder="0"></iframe>
+<body style="background: url({{URL::asset('img/bg.jpg')}}) no-repeat;background-attachment: fixed;background-size: cover;">
+<div class="col-md-2 sidebar">
+    @include('layouts.admin-nav')
+</div>
+<div class="col-md-offset-2">
+    <div class="container" style="margin-top: 30px">
+        @section('form')
+            <div class="row" style="margin-top: 400px">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">提示</div>
+                        <div class="panel-body">
+                            <p>{{ Auth::user()->name }}，欢迎登陆!</p>
+                            <p>上次登陆时间：</p>
+                            <p>上次登录IP：</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @show
+    </div>
+</div>
 </body>
 </html>

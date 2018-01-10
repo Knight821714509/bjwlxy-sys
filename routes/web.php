@@ -25,5 +25,41 @@ Route::get('admin-nav',function (){
 Route::get('admin',function (){
     return view('layouts.admin');
 });
+Route::get('in-art',function (){
+    return view('admin.insert-article');
+});
+Route::get('sel-art',function (){
+    return view('admin.select-article');
+});
+Route::get('in-col',function (){
+    return view('admin.insert-column');
+});
+Route::get('sel-col',function (){
+    return view('admin.select-column');
+});
+Route::get('add-mem',function (){
+    return view('admin.add-member');
+});
+Route::get('del-mem',function (){
+    return view('admin.del-member');
+});
+Route::get('permission',function (){
+    return view('admin.permission');
+});
+Route::get('title',function (){
+    return view('admin.title');
+});
+Route::get('banner',function (){
+    return view('admin.banner');
+});
+Route::get('top',function (){
+    return view('admin.top');
+});
+Route::get('friend',function (){
+    return view('admin.friend-link');
+});
+Route::get('info',function (){
+    return view('admin.up-info');
+});
 
 Route::get('insertArticle','Article\InsertArticleController@insertArticle');
