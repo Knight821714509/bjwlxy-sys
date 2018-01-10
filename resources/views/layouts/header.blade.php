@@ -21,7 +21,9 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 @foreach($nav as &$item)
+                    @if($item->status == 0)
                     <li><a href="{{url('list').'/'.$item->url}}">{{$item->title}}</a></li>
+                    @endif
                 @endforeach
             </ul>
         </div>
