@@ -27,6 +27,3 @@ Route::get('admin',function (){
 });
 
 Route::get('insertArticle','Article\InsertArticleController@insertArticle');
-
-
-

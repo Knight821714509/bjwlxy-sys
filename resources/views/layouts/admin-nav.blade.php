@@ -89,9 +89,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="" target="mainframe">编辑信息</a></li>
                                 <li>
-                                    <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                                    <a href="javascript:logout()" target="_top">
                                         注销
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -106,5 +104,12 @@
         </div>
     </nav>
 </div>
+<script type="text/javascript">
+    function logout() {
+        event.preventDefault();
+        document.getElementById('logout-form').submit();
+        window.location.href="{{ route('logout') }}";
+    }
+</script>
 </body>
 </html>
