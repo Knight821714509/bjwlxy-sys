@@ -28,7 +28,7 @@
                     <div class="col-md-7">
                         <select class="form-control" name="category" id="category">
                             <option class="form-control" value="">请选择</option>
-                            <option class="form-control" value="2">学院动态</option>
+                            <option class="form-control" value="xydt">学院动态</option>
                         </select>
                     </div>
                 </div>

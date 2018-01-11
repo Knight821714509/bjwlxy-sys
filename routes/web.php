@@ -11,14 +11,15 @@
 |
 */
 
+// 前台界面路由
 Route::get('/', 'Article\FindTitleController@findTitleForIndex');
 Route::get('list/{name}','Article\FindTitleController@findTitleByColumn');
 Route::get('list','Article\FindTitleController@findTitleInIndex');
 Route::get('content/{id}','Article\FindArticleController@findArticleInContent');
-
+// 登录路由
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
+// 后台功能路由
 Route::get('admin-nav',function (){
     return view('layouts.admin-nav');
 });
