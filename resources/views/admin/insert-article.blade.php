@@ -29,7 +29,9 @@
                     <div class="col-md-7">
                         <select class="form-control" name="category" id="category">
                             <option class="form-control" value="">请选择</option>
-                            <option class="form-control" value="xydt">学院动态</option>
+                            @foreach($col as &$item)
+                                <option class="form-control" value="{{$item->url}}">{{$item->title}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

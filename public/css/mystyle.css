@@ -85,3 +85,6 @@
 li>a{
     color: #ccc;
 }
+.list-group-item>a{
+    color: #333333;
+}

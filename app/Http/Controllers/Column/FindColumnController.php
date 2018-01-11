@@ -7,9 +7,14 @@ use App\Http\Controllers\Controller;
 
 class FindColumnController extends Controller{
 
-    public static function findAllColumn($layout){
+    public static function findAllColumnByLayout($layout){
         $column = Column::where('pid' ,$layout)
         ->get();
+        return $column;
+    }
+
+    public static function findAllColumn(){
+        $column = Column::get();
         return $column;
     }
 

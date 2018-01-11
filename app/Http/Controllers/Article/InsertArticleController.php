@@ -19,9 +19,11 @@ class InsertArticleController extends Controller{
         $article->category_id = $category->id;
         $article->content = $request->input('content');
         $article->save();
-        return view('admin.insert-article');
+        $col = FindColumnController::findAllColumn();
+        return view('admin.insert-article',['col' => $col]);
     }
     public function initView(){
-
+        $col = FindColumnController::findAllColumn();
+        return view('admin.insert-article',['col' => $col]);
     }
 }

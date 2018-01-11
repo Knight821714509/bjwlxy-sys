@@ -13,8 +13,9 @@
 
 // 前台界面路由
 Route::get('/', 'Article\FindTitleController@findTitleForIndex');
+// 获取列表页面
 Route::get('list/{name}','Article\FindTitleController@findTitleByColumn');
-Route::get('list','Article\FindTitleController@findTitleInIndex');
+// 获取文章内容
 Route::get('content/{id}','Article\FindArticleController@findArticleInContent');
 // 登录路由
 Auth::routes();
@@ -25,9 +26,6 @@ Route::get('admin-nav',function (){
 });
 Route::get('admin',function (){
     return view('layouts.admin');
-});
-Route::get('in-art',function (){
-    return view('admin.insert-article');
 });
 Route::get('sel-art',function (){
     return view('admin.select-article');
@@ -62,5 +60,7 @@ Route::get('friend',function (){
 Route::get('info',function (){
     return view('admin.up-info');
 });
-
+//初始化添加文章页面文章分类
+Route::get('in-art','Article\InsertArticleController@initView');
+//添加文章
 Route::post('in-arti','Article\InsertArticleController@insertArticle');
