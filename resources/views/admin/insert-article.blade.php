@@ -4,7 +4,8 @@
     <div class="panel">
         <div class="panel-heading">添加文章</div>
         <div class="panel-body">
-            <form class="form-horizontal" action="" method="post">
+            <form class="form-horizontal" action="{{url('in-arti')}}" method="post">
+                {{csrf_field()}}
                 <div class="form-group">
                     <label class="control-label col-md-3" for="title">文章标题：</label>
                     <div class="col-md-7">
@@ -34,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label col-md-3" for="editor_id">文章内容：</label>
-                    <textarea id="editor_id" name="content" style="width:700px;height:600px;"></textarea>
+                    <textarea id="editor_id" name="content" style="width:668px;height:600px;"></textarea>
                 </div>
                 <div class="col-md-offset-3 col-md-7">
                     <input class="btn btn-success" type="submit" value="发布文章">

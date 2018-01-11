@@ -63,4 +63,4 @@ Route::get('info',function (){
     return view('admin.up-info');
 });
 
-Route::get('insertArticle','Article\InsertArticleController@insertArticle');
+Route::post('in-arti','Article\InsertArticleController@insertArticle');

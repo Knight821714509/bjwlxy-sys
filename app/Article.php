@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model{
     protected $table = 'document';
     protected $primaryKey = 'id';
-    public $timestamps = false;
+    const CREATED_AT = 'create_time';
+    const UPDATED_AT = 'update_time';
 }

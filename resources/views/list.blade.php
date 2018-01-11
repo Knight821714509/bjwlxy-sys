@@ -6,7 +6,7 @@
             <li class="list-group-item">
                 <a title="{{$item->title}}" href="{{url('content').'/'.$item->id}}">
                     {{$item->title}}
-                    <span class="pull-right">{{date('y/m/h',$item->create_time)}}</span>
+                    <span class="pull-right">{{date('Y/m/d',strtotime($item->create_time))}}</span>
                 </a>
             </li>
                 <br>

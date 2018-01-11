@@ -84,7 +84,7 @@
                     <a class="fontlink" href="content/{{$item->id}}">
                         <p class="myoverflow">{{$item->title}}</p>
                         <p class="contentlink">{{$item->description}}</p>
-                        <p class="contentlink text-right">{{date('y/m/d',$item->create_time)}}</p>
+                        <p class="contentlink text-right">{{date('Y/m/d',strtotime($item->create_time))}}</p>
                     </a>
                     <hr>
                 </div>
@@ -104,7 +104,7 @@
                                 <a class="fontlink" href="content/{{$item->id}}">
                                     <p class="myoverflow">{{$item->title}}</p>
                                     <p class="contentlink">{{$item->description}}</p>
-                                    <p class="contentlink text-right">{{date('y/m/d',$item->create_time)}}</p>
+                                    <p class="contentlink text-right">{{date('Y/m/d',strtotime($item->create_time))}}</p>
                                 </a>
                                 <hr>
                             </div>
