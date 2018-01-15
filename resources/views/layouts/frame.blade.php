@@ -44,8 +44,8 @@
                         <div class="panel-heading">提示</div>
                         <div class="panel-body">
                             <p>{{ Auth::user()->name }}，欢迎登陆!</p>
-                            <p>上次登陆时间：</p>
-                            <p>上次登录IP：</p>
+                            <p>上次登陆时间：@yield('time')</p>
+                            <p>上次登录IP：@yield('ip')</p>
                         </div>
                     </div>
                 </div>

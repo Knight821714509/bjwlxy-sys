@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,8 +25,14 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        User::where('email',$request->header('email',null))
-            ->update(['last_time' => time()]);
-        return view('home');
+        $user = User::find(Auth::id());
+        $ip = $user->last_ip;
+        $time = $user->last_time;
+        $user->last_ip = $request->getClientIp();
+        $user->save();
+        return view('home',['ip' => $ip,'time' => $time]);
+    }
+
+    public function updateIP(){
     }
 }
