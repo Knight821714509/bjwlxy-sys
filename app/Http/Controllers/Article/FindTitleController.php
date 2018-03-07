@@ -37,4 +37,10 @@ class FindTitleController extends Controller{
         $nav = FindColumnController::findAllColumnByLayout(0);
         return view('index',['xydt' => $xydtList,'zzjg' => $zzjgList,'nav' => $nav]);
     }
+
+    public function newList(){
+        $article =  Article::limit('created_time','desc')
+            ->get();
+        return view('admin.select-article',['newList' => $article]);
+    }
 }

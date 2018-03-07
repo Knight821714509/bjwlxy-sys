@@ -27,9 +27,6 @@ Route::get('admin-nav',function (){
 Route::get('admin',function (){
     return view('layouts.admin');
 });
-Route::get('sel-art',function (){
-    return view('admin.select-article');
-});
 Route::get('in-col',function (){
     return view('admin.insert-column');
 });
@@ -62,5 +59,7 @@ Route::get('info',function (){
 });
 //初始化添加文章页面文章分类
 Route::get('in-art','Article\InsertArticleController@initView');
+//初始化编辑文章页面
+Route::get('sel-art','Article\FindTitleController@newList');
 //添加文章
 Route::post('in-arti','Article\InsertArticleController@insertArticle');
