@@ -18,11 +18,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
                         @foreach($newList as &$item)
-                            <td>{{$item->title}}</td>
+                            <tr><td>{{$item->title}}</td><td><a href="" class="btn btn-info btn-sm">编辑</a></td><td><a
+                                            href="" class="btn btn-danger btn-sm">删除</a></td></tr>
                         @endforeach
-                    </tr>
+                    <tr><td>{{$newList->links()}}</td></tr>
                     </tbody>
                 </table>
             </form>

@@ -39,8 +39,8 @@ class FindTitleController extends Controller{
     }
 
     public function newList(){
-        $article =  Article::limit('created_time','desc')
-            ->get();
+        $article =  Article::orderBy('create_time','desc')
+        ->paginate(10);
         return view('admin.select-article',['newList' => $article]);
     }
 }
