@@ -63,3 +63,5 @@ Route::get('in-art','Article\InsertArticleController@initView');
 Route::get('sel-art','Article\FindTitleController@newList');
 //添加文章
 Route::post('in-arti','Article\InsertArticleController@insertArticle');
+//删除文章
+Route::get('del-art/{id}','Article\DeleteArticleController@deleteArticleById');
