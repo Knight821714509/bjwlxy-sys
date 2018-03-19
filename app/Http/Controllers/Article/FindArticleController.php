@@ -21,6 +21,12 @@ class FindArticleController extends Controller{
             ->with('list',self::findHotList($request,'view'))
             ->with('newList',self::findHotList($request,'create_time'));
     }
+    public static function findArticleById($id){
+        $article = Article::where('id',$id)->first();
+        $auth = User::where('id',$article->uid)->first();
+        $articleArr = array($article,$auth);
+        return $articleArr;
+    }
     public static function findHotList(Request $request,$flag){
         if ($request->session()->has('hotList')){
             $list = $request->session()->get('hotList');

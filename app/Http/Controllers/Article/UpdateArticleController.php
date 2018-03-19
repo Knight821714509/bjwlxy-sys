@@ -7,10 +7,13 @@
  */
 namespace App\Http\Controllers\Article;
 
+use App\Http\Controllers\Column\FindColumnController;
 use App\Http\Controllers\Controller;
 
 class UpdateArticleController extends Controller{
-    public function updateArticleById($id){
-        
+    public function fillUpdateArticleForm($id){
+        $article = FindArticleController::findArticleById($id);
+        $col = FindColumnController::findAllColumn();
+        return view('admin.update-article',['article' => $article,'col' => $col]);
     }
 }

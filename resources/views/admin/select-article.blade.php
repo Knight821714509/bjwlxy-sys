@@ -19,7 +19,7 @@
                     </thead>
                     <tbody>
                         @foreach($newList as &$item)
-                            <tr><td>{{$item->title}}</td><td><a href="" class="btn btn-info btn-sm">编辑</a></td><td><a
+                            <tr><td>{{$item->title}}</td><td><a href="{{url('upd-art').'/'.$item->id}}" class="btn btn-info btn-sm">编辑</a></td><td><a
                                             href="{{url('del-art').'/'.$item->id}}" class="btn btn-danger btn-sm">删除</a></td></tr>
                         @endforeach
                     <tr><td>{{$newList->links()}}</td></tr>
