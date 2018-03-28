@@ -19,7 +19,8 @@
             @yield('content')
         </div>
     </div>
-    <div class="col-md-3 pull-right pack">
+    <div class="hidden-md hidden-lg col-sm-12 col-xs-12" style="height: 30px"></div>
+    <div class="col-md-3 col-xs-12 col-sm-12 pull-right pack">
         <h3>热门文章</h3>
         <hr>
         <ul class="list-group">
@@ -28,7 +29,7 @@
             @endforeach
         </ul>
     </div>
-    <div class="col-md-3 pull-right pack" style="margin-top: 27px">
+    <div class="col-md-3 col-xs-12 col-sm-12 pull-right pack" style="margin-top: 27px">
         <h3>最新文章</h3>
         <hr>
         <ul class="list-group">
