@@ -13,7 +13,7 @@ class FindTitleController extends Controller{
         $list = Article::where('category_id',$column->id)
             ->orderBy('create_time','desc')
             ->paginate(10);
-        $nav = FindColumnController::findAllColumnByLayout(0);
+        $nav = FindColumnController::findAllColumnByPid(0);
         return view('list')->with('titleList',$list)
             ->with('nav',$nav)
             ->with('list',FindArticleController::findHotList($request,'view'))
@@ -34,7 +34,7 @@ class FindTitleController extends Controller{
             ->orderBy('create_time','desc')
             ->limit(4)
             ->get();
-        $nav = FindColumnController::findAllColumnByLayout(0);
+        $nav = FindColumnController::findAllColumnByPid(0);
         return view('index',['xydt' => $xydtList,'zzjg' => $zzjgList,'nav' => $nav]);
     }
 

@@ -27,9 +27,6 @@ Route::get('admin-nav',function (){
 Route::get('admin',function (){
     return view('layouts.admin');
 });
-Route::get('in-col',function (){
-    return view('admin.insert-column');
-});
 Route::get('sel-col',function (){
     return view('admin.select-column');
 });
@@ -67,5 +64,8 @@ Route::post('in-arti','Article\InsertArticleController@insertArticle');
 Route::get('del-art/{id}','Article\DeleteArticleController@deleteArticleById');
 //编辑文章
 Route::get('upd-art/{id}','Article\UpdateArticleController@fillUpdateArticleForm');
-
+//提交编辑文章结果
 Route::post('up-arti','Article\UpdateArticleController@updateContent');
+
+//添加栏目
+Route::get('in-col','Column\FindColumnController@initInsertCol');

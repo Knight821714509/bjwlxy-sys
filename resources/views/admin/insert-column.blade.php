@@ -7,9 +7,11 @@
         </div>
         <div class="panel-body">
             <div class="list-group">
-                <div class="list-group-item">
-                    栏目
-                </div>
+                @foreach($col as $item)
+                    <div class="list-group-item">
+                        {{$item->title}}
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

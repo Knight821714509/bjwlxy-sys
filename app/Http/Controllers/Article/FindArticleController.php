@@ -13,7 +13,7 @@ class FindArticleController extends Controller{
         $article = Article::where('id',$id)->first();
         $auth = User::where('id',$article->uid)->first();
         Article::increment('view');
-        $nav = FindColumnController::findAllColumnByLayout(0);
+        $nav = FindColumnController::findAllColumnByPid(0);
         return view('content')
             ->with('nav',$nav)
             ->with('article',$article)

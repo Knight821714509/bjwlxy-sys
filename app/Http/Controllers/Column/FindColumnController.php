@@ -7,10 +7,15 @@ use App\Http\Controllers\Controller;
 
 class FindColumnController extends Controller{
 
-    public static function findAllColumnByLayout($layout){
-        $column = Column::where('pid' ,$layout)
+    public static function findAllColumnByPid($pid){
+        $column = Column::where('pid' ,$pid)
         ->get();
         return $column;
+    }
+
+    public function initInsertCol(){
+        $col = self::findAllColumnByPid(0);
+        return view('admin.insert-column',['col' => $col]);
     }
 
     public static function findAllColumn(){
