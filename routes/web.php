@@ -60,10 +60,12 @@ Route::get('info',function (){
 //初始化添加文章页面文章分类
 Route::get('in-art','Article\InsertArticleController@initView');
 //初始化编辑文章页面
-Route::get('sel-art','Article\FindTitleController@newList');
+Route::get('sel-art','Article\FindTitleController@newList')->name('sel-art');
 //添加文章
 Route::post('in-arti','Article\InsertArticleController@insertArticle');
 //删除文章
 Route::get('del-art/{id}','Article\DeleteArticleController@deleteArticleById');
 //编辑文章
 Route::get('upd-art/{id}','Article\UpdateArticleController@fillUpdateArticleForm');
+
+Route::post('up-arti','Article\UpdateArticleController@updateContent');
